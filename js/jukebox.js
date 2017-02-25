@@ -14,31 +14,40 @@ function randomNumber() {
   return Math.floor(Math.random());
 }
 
-function menu() {
-  $('#menu').on('click', function(e) {
+function menuClicked(){
     $('#menuOptions').html("You can play a song, pause a song, or view all the songs");
-  });
-}
+  };
 
-function play() {
-  $('#play').on('click', function(e) {
+function playClicked(){
     $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
     return "now playing " + songToPlay + " by " + theArtist;
-  });
-}
+  };
 
-function pause() {
-  $('#pause').on('click', function(e) {
+function pauseClicked(){
     $('#songPaused').html(songToPlay + " is paused");
-  });
-}
+  };
 
-function show() {
-  $('#show').on('click', function(e) {
+function showClicked(){
     var songs = "";
     for (var key in jukeboxSongs) {
       songs += jukeboxSongs[key] + " by " + key +  " is available to play. "
     }
     $('#showSongs').html(songs);
-  });
+  };
+
+
+function menu() {
+  $('#menu').on('click', menuClicked)
+}
+
+function play() {
+  $('#play').on('click', playClicked)
+}
+
+function pause() {
+  $('#pause').on('click', pauseClicked);
+}
+
+function show() {
+  $('#show').on('click', showClicked);
 }
