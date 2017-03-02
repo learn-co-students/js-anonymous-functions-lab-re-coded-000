@@ -5,6 +5,7 @@ $(document).ready(function(){
   show();
 });
 
+
 var jukeboxSongs = { "taylor swift": "in the clear", "beyonce": "halo", "drake": "hotline bling"};
 var artists = Object.keys(jukeboxSongs);
 var theArtist = artists[Math.floor(Math.random()) * artists.length];
@@ -14,11 +15,13 @@ function randomNumber() {
   return Math.floor(Math.random());
 }
 
+
 function menu() {
   $('#menu').on('click', function(e) {
     $('#menuOptions').html("You can play a song, pause a song, or view all the songs");
   });
 }
+
 
 function play() {
   $('#play').on('click', function(e) {
@@ -27,11 +30,13 @@ function play() {
   });
 }
 
+
 function pause() {
   $('#pause').on('click', function(e) {
     $('#songPaused').html(songToPlay + " is paused");
   });
 }
+
 
 function show() {
   $('#show').on('click', function(e) {
