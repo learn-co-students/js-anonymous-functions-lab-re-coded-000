@@ -10,30 +10,30 @@ var artists = Object.keys(jukeboxSongs);
 var theArtist = artists[Math.floor(Math.random()) * artists.length];
 var songToPlay = jukeboxSongs[theArtist];
 
-function randomNumber() {
+  function randomNumber() {
   return Math.floor(Math.random());
 }
 
-function menu() {
+var menu= function() {
   $('#menu').on('click', function(e) {
     $('#menuOptions').html("You can play a song, pause a song, or view all the songs");
   });
 }
 
-function play() {
+var play= function() {
   $('#play').on('click', function(e) {
     $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
     return "now playing " + songToPlay + " by " + theArtist;
   });
 }
 
-function pause() {
+var pause= function() {
   $('#pause').on('click', function(e) {
     $('#songPaused').html(songToPlay + " is paused");
   });
 }
 
-function show() {
+var show= function() {
   $('#show').on('click', function(e) {
     var songs = "";
     for (var key in jukeboxSongs) {
