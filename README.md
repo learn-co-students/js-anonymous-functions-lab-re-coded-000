@@ -2,7 +2,7 @@
 
 ## Objectives
 
-+ Effectively use anonymous functions
+ Effectively use anonymous functions
 
 ## Intro
 
